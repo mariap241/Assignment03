@@ -29,18 +29,33 @@ public class BankAccount {
        
 }
     public double deposit(double amount){
+        System.out.println("------------------");
+        System.out.println(this.getOwner() + "'s Initial Balance: $" + balance);
+        
         this.balance = balance + amount;
         
+        System.out.println("Deposit: $" + amount);
+        System.out.println("Available Balance: $" + this.getBalance());
+        System.out.println("------------------");
         return this.balance;
     }
     
     public double withdraw(double amount){
-        this.balance = balance - amount;
+        System.out.println("------------------");
+        System.out.println(this.getOwner()+ "'s Initial Balance: $" + balance);
         
+        this.balance = balance - amount;
+       
+        System.out.println("Withdraw: $" + amount);
+        System.out.println("Available Balance: $" + this.getBalance());
+        System.out.println("------------------");
         return this.balance;
     }
     
     public void display(){
-        System.out.println("Available Balance: $" + this.balance);
+        System.out.println("------------------");
+        System.out.println(owner + "'s Bank Account" );
+        System.out.println("Available Balance: $" + this.getBalance());
+        System.out.println("------------------");
     }
 }
